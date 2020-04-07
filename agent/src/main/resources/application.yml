@@ -1,0 +1,19 @@
+server:
+  port: 9998
+  servlet:
+    context-path: /cloudmonitor-agent
+spring:
+  application:
+    name: cloudmonitor-agent
+#日志文件输出路径
+logging:
+  path: ./log
+
+#自定义配置参数
+base:
+  #cloudmonitor-server端访问地址
+  serverUrl: http://localhost:8080
+  #本机ip，不要用localhost或127.0.0.1
+  bindIp: 192.168.1.2
+  #通信token，请和server端配置的wgToken保持一致
+  wgToken: cloudmonitor
